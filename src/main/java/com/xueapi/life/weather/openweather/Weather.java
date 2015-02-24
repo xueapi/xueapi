@@ -9,19 +9,19 @@ public class Weather {
 	
 	private static final Log log = LogFactory.getLog(Weather.class);
 	
-	private static final String AppId = "xxxxxxxxxxxxxx";  //此处替换成你的AppId
+	private static final String AppId = "797f379982ac7cb9";  //此处替换成你的AppId
 
-    //密钥
-	private static final String Private_Key = "xxxxxx_SmartWeatherAPI_xxxxxxx";  //此处替换成你的Private_Key
+	//密钥
+	private static final String Private_Key = "c67d0a_SmartWeatherAPI_853769f";  //此处替换成你的Private_Key
 
 	public String getWeatherInfo(String areaid, String type, String date){
-		String dateStr = "http://open.weather.com.cn/data/?areaid=" + areaid + "&type=" + type + "&date=" + date;
-		//需要加密的数据
+        String dateStr = "http://open.weather.com.cn/data/?areaid=" + areaid + "&type=" + type + "&date=" + date;
+        //需要加密的数据
         String data = dateStr + "&appid=" + AppId;        
         String key = StandardURLEncoder.encoder(data, Private_Key);
         String url = dateStr + "&appid=" + AppId.substring(0, 6) + "&key=" + key;
 
-		log.info("url = " + url);
+        log.info("url = " + url);
         HttpGetClient client = new HttpGetClient();
         String content = client.getWeatherInfo(url);
 		
