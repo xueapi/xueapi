@@ -9,10 +9,10 @@ public class Weather {
 	
 	private static final Log log = LogFactory.getLog(Weather.class);
 	
-	private static final String AppId = "797f379982ac7cb9";  //此处替换成你的AppId
+	private static final String AppId = "xxxxxxxxxxxxxx";  //此处替换成你的AppId
 
 	//密钥
-	private static final String Private_Key = "c67d0a_SmartWeatherAPI_853769f";  //此处替换成你的Private_Key
+	private static final String Private_Key = "xxxxxx_SmartWeatherAPI_xxxxxxx";  //此处替换成你的Private_Key
 
 	public String getWeatherInfo(String areaid, String type, String date){
         String dateStr = "http://open.weather.com.cn/data/?areaid=" + areaid + "&type=" + type + "&date=" + date;
